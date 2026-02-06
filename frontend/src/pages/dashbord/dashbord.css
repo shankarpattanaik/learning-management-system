@@ -1,0 +1,58 @@
+.student-dashboard {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.dashboard-header h2 {
+  font-size: clamp(20px, 3vw, 30px);
+  color: #6d2932;
+}
+
+.empty-state {
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.empty-state h3 {
+  font-size: 20px;
+  color: #6d2932;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .student-dashboard {
+    padding: 12px;
+    margin-bottom: 50px;
+  }
+
+  .dashboard-content {
+    gap: 16px;
+  }
+
+  .empty-state {
+    padding: 32px 20px;
+  }
+}

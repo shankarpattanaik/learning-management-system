@@ -1,0 +1,45 @@
+import React, { useEffect } from "react";
+import "./coursestudy.css";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { CourseData } from "../../context/CourseContext";
+import { server } from "../../main";
+
+const CourseStudy = ({ user }) => {
+  const params = useParams();
+
+  const { fetchCourse, course } = CourseData();
+  const navigate = useNavigate();
+
+  if (user && user.role !== "admin" && !user.subscription.includes(params.id))
+    return navigate("/");
+
+  useEffect(() => {
+    fetchCourse(params.id);
+  }, []);
+  return (
+    <>
+      {course && (
+        <div className="course-study-page">
+          <img src={`${server}/${course.image}`} alt={course.title} />
+
+          <div className="course-content">
+            <h2>{course.title}</h2>
+            <h4>{course.description}</h4>
+            <h5>Created By - {course.createdBy}</h5>
+            <h5>Duration - {course.duration} weeks</h5>
+
+            <button
+              type="button"
+              className="common-btn"
+              onClick={() => navigate(`/lectures/${course._id}`)}
+            >
+              Watch Lectures
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default CourseStudy;
