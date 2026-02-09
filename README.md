@@ -87,13 +87,13 @@ cd <project-folder>
 - npm run dev
 
 # 🧪 Environment Variables
-PORT=5000
-DB=mongodb+srv://<DB_USER>:<DB_PASSWORD>@cluster0.mnhzdt7.mongodb.net/<DB_NAME>?retryWrites=true&w=majority
-RAZORPAY_KEY=<your_razorpay_key>
-RAZORPAY_SECRET=<your_razorpay_secret>
-GMAIL=<your_email>
-GMAIL_PASSWORD=<your_email_password>
-ACTIVATION_SECRET=<random_secret_for_email_activation>
-JWT_SECRET=<random_jwt_secret>
-FORGOT_SECRET=<random_secret_for_password_reset>
-FRONTEND_URL=http://localhost:5173
+- PORT=5000
+- DB=mongodb+srv://<DB_USER>:<DB_PASSWORD>@cluster0.mnhzdt7.mongodb.net/<DB_NAME>?retryWrites=true&w=majority
+- RAZORPAY_KEY=<your_razorpay_key>
+- RAZORPAY_SECRET=<your_razorpay_secret>
+- GMAIL=<your_email>
+- GMAIL_PASSWORD=<your_email_password>
+- ACTIVATION_SECRET=<random_secret_for_email_activation>
+- JWT_SECRET=<random_jwt_secret>
+- FORGOT_SECRET=<random_secret_for_password_reset>
+- FRONTEND_URL=http://localhost:5173
