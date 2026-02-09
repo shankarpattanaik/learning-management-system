@@ -70,36 +70,30 @@ Includes **Razorpay integration**, **JWT authentication**, **OTP verification**,
 
 # 📦 Installation
 
-1. **Clone the repository**
+**Clone the repository**
 
 ```bash
 git clone <repository-url>
 cd <project-folder>
 ```
 # Backend
-cd backend
-npm install
+- cd backend
+- npm install
+- node index.js
 
 # Frontend
-cd ../frontend
-npm install
+- cd frontend
+- npm install
+- npm run dev
 
-# Server & Database
+# 🧪 Environment Variables
 PORT=5000
 DB=mongodb+srv://<DB_USER>:<DB_PASSWORD>@cluster0.mnhzdt7.mongodb.net/<DB_NAME>?retryWrites=true&w=majority
-
-# Razorpay Payment Integration
 RAZORPAY_KEY=<your_razorpay_key>
 RAZORPAY_SECRET=<your_razorpay_secret>
-
-# Email (for OTP & notifications)
 GMAIL=<your_email>
 GMAIL_PASSWORD=<your_email_password>
-
-# Security Secrets
 ACTIVATION_SECRET=<random_secret_for_email_activation>
 JWT_SECRET=<random_jwt_secret>
 FORGOT_SECRET=<random_secret_for_password_reset>
-
-# Frontend URL
 FRONTEND_URL=http://localhost:5173
